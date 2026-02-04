@@ -1,0 +1,39 @@
+{
+  "experiment": "LFM Lensing - Coupled Wave System",
+  "equations": {
+    "GOV-01": "\u2202\u00b2E/\u2202t\u00b2 = c\u00b2\u2207\u00b2E \u2212 \u03c7\u00b2E",
+    "GOV-02": "\u2202\u00b2\u03c7/\u2202t\u00b2 = c\u00b2\u2207\u00b2\u03c7 \u2212 \u03ba(E\u00b2 \u2212 E\u2080\u00b2)"
+  },
+  "note": "Both E and \u03c7 are dynamical fields. \u03c7 EMERGES from coupling.",
+  "parameters": {
+    "c": 1.0,
+    "chi_0": 1.0,
+    "kappa": 0.5,
+    "mass_amplitude": 2.0
+  },
+  "chi_emergence": {
+    "at_center": 0.1,
+    "reduction_percent": 90.0
+  },
+  "results": [
+    {
+      "impact_param": 25.0,
+      "delta_y": -13.274850980224377,
+      "theta_mrad": -65.9470310709487,
+      "direction": "TOWARD mass"
+    },
+    {
+      "impact_param": 45.0,
+      "delta_y": -26.990535158551243,
+      "theta_mrad": -120.83013012938127,
+      "direction": "TOWARD mass"
+    },
+    {
+      "impact_param": 65.0,
+      "delta_y": -46.22721573599084,
+      "theta_mrad": -209.85885560749037,
+      "direction": "TOWARD mass"
+    }
+  ],
+  "conclusion": "Gravity emerges"
+}
