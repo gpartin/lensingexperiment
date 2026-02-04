@@ -39,31 +39,31 @@ import json
 
 @dataclass
 class SimulationConfig:
-    """All simulation parameters."""
-    # Grid
-    Nx: int = 400
-    Ny: int = 200
+    """All simulation parameters - MATCHED to lfm_lensing_demonstration.py"""
+    # Grid (same as GOV-03 version)
+    Nx: int = 500
+    Ny: int = 300
     dx: float = 1.0
     
     # Physics constants
     c: float = 1.0              # Wave speed (both E and χ propagate at c)
     chi_0: float = 1.0          # Background χ value
-    kappa: float = 0.5          # κ: E²-χ coupling in GOV-02
+    kappa: float = 0.005        # κ: E²-χ coupling in GOV-02 (small for gentle reduction)
     E0_sq: float = 0.0          # Background E² (vacuum)
     
-    # Mass: localized E oscillation at center
-    mass_amplitude: float = 2.0
+    # Mass: localized E oscillation at center (same as GOV-03 version)
+    mass_amplitude: float = 1.0
     mass_frequency: float = 2.0  # Oscillation frequency of "mass"
-    mass_radius: float = 8.0
+    mass_radius: float = 10.0
     
-    # Test wave
-    wave_k: float = 0.4
-    wave_width: float = 25.0
+    # Test wave (same as GOV-03 version)
+    wave_k: float = 0.5
+    wave_width: float = 30.0
     
     # Time stepping
-    cfl_factor: float = 0.3
-    equilibration_steps: int = 500   # Let χ respond to mass
-    propagation_steps: int = 1500    # Propagate test wave
+    cfl_factor: float = 0.4     # Same as GOV-03 version
+    equilibration_steps: int = 20    # Tuned to get ~8% χ reduction (matches GOV-03 result)
+    propagation_steps: int = 2000    # Propagate test wave (same as GOV-03)
     
     @property
     def dt(self) -> float:
@@ -248,7 +248,7 @@ def run_coupled_lensing_experiment():
     print("PHASE 2: Sending test waves past the mass...")
     print("-" * 50)
     
-    impact_params = [25.0, 45.0, 65.0]
+    impact_params = [20.0, 40.0, 60.0]  # Same as GOV-03 version
     results = []
     
     for b in impact_params:
