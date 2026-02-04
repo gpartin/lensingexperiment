@@ -70,11 +70,11 @@ python lfm_substrate_frequency_scan.py
 
 | File | Description |
 |------|-------------|
-| `lfm_substrate_lensing.py` | Main experiment: star + radiating atom, measures lensing |
-| `lfm_substrate_frequency_scan.py` | Tests frequency dependence across ω/χ₀ range |
-| `lfm_substrate_frequency_test.py` | Tests atoms of different sizes |
-| `lfm_coupled_radiation.py` | Demonstrates radiation from excited hydrogen-like atom |
+| `lfm_substrate_lensing.py` | **Main experiment**: star + radiating atom, measures lensing |
+| `lfm_substrate_frequency_scan.py` | **Frequency test**: confirms achromatic lensing |
+| `figures/` | Output figures from experiments |
 | `REDDIT_RESPONSE.md` | Response to Klein-Gordon dispersion critique |
+| `dev/` | Development/auxiliary scripts (not needed to run main experiments) |
 
 ## What This Demonstrates
 
